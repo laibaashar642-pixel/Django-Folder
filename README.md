@@ -1,5 +1,11 @@
 
 
+---
+
+# Django Project Folder
+
+This repository contains the base configuration and files for a Django project. Below is an overview of the folder structure and the purpose of each file.
+
 ## 📂 Folder Structure
 
 ```
@@ -7,29 +13,41 @@ Django-Folder/
 │
 ├── __init__.py
 ├── settings.py
+├── urls.py
+├── asgi.py
+├── wsgi.py
+├── manage.py
 └── README.md
 ```
 
-### File Descriptions
+## 📑 File Descriptions
 
 - **`__init__.py`**  
   - Marks the folder as a Python package.  
-  - Ensures Django recognizes this directory as part of the project.  
-  - Usually left empty, but can include package-level imports if required.
+  - Ensures Django recognizes this directory as part of the project.
 
 - **`settings.py`**  
-  - The main configuration file for the Django project.  
-  - Contains settings for:
-    - Installed apps  
-    - Middleware  
-    - Database configuration  
-    - Templates and static files  
-    - Security keys and debug mode  
-    - Allowed hosts  
+  - Main configuration file for the Django project.  
+  - Contains settings for installed apps, middleware, database, templates, static files, security keys, and allowed hosts.
+
+- **`urls.py`**  
+  - Defines URL routing for the project.  
+  - Maps URLs to views and organizes app-level routes.
+
+- **`asgi.py`**  
+  - Entry point for ASGI-compatible web servers.  
+  - Used for handling asynchronous requests, WebSockets, and background tasks.
+
+- **`wsgi.py`**  
+  - Entry point for WSGI-compatible web servers.  
+  - Used for deploying the project in production environments.
+
+- **`manage.py`**  
+  - Command-line utility for managing the project.  
+  - Allows you to run commands like `runserver`, `migrate`, `createsuperuser`, and more.
 
 - **`README.md`**  
-  - Provides documentation and context for the project.  
-  - Explains setup instructions, usage, and future improvements.
+  - Documentation file explaining the project setup, usage, and structure.
 
 ---
 
@@ -63,12 +81,12 @@ Django-Folder/
 
 ## 📌 Next Steps
 
-- Add `urls.py` for routing.  
-- Create apps within the project using:
+- Add apps using:
   ```bash
   python manage.py startapp app_name
   ```
-- Expand documentation to include project goals, features, and contribution guidelines.
+- Expand documentation to include project goals, features, and contribution guidelines.  
+- Configure static files, templates, and middleware as needed.
 
 ---
 
