@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .form-control {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.form-control:focus {
+  border-color: #28a745;
+  box-shadow: 0px 0px 2px rgba(40,167,69,0.3);
+  outline: none;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+    
+    <form method="post" enctype="multipart/form-data">
+        
+        <div class="container"Add Recepie></div>
+        {% csrf_token %}
+        <div class="mb-3">
+        <label class="form-label">Receipe name</label>
+        <input type="text" class="form-control" name="receipe_name" required>
+      </div>
+    
+      <div class="mb-3">
+        <label class="form-label">Receipe description</label>
+        <textarea class="form-control" name="receipe_description" rows="3" required></textarea>
+      </div>
+    
+      <div class="mb-3">
+        <label class="form-label">Receipe Image</label>
+        <input type="file" class="form-control" name="receipe_image" required>
+      </div>
+        </div>
+      <button type="submit" class="btn btn-success">Add Recipe</button>
+    </form>
+</body>
+</html>
+<!--we use post method to send data from frontend to backened aur agr backened sai frontened to context use krty hai
+html file ya form sai hum nai koi bhi file backened mai upload krni ho ghi tu hum enctype=multiple/form-data aur hamay aik aur cheez lkhni prti hai
+data backend mai lanay kai lia crs token ye dekhta hai kai jo request   origin hui hai wo usi project kai server sai origin hui hai like agr 
+hum kisi unnethical way sai data bhejain gai tu ye dekh lai gi ye tu kisi aur ka hai like jb bhi hum deploy kry gai ya tu wo hr baar chage ho gha
+  -->
